@@ -11,7 +11,6 @@ RUN cp '/tmp/oldschool/OldSchool-dmg/jagexappletviewer.jar' ~/'runescape/oldscho
 
 RUN rm -Rf '/tmp/oldschool'
 
-RUN apt-get install -y xvfb
 WORKDIR /root/runescape/oldschool
 
 CMD java -Duser.home='.' -Djava.class.path='jagexappletviewer.jar' -Dcom.jagex.config='http://oldschool.runescape.com/jav_config.ws' 'jagexappletviewer' 'oldschool'
